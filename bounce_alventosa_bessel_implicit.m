@@ -95,10 +95,11 @@ fname2 = ['c0Mat_Rho' rhostring 'R' rstring 'MM' num2str(mm) ptype 'b' num2str(b
 %
 Rmult = 1;
 % [PSI,ZCM,re] = zcmVareaEllipse(rho,R,Rmult,sig);
-PSI = linspace(0.01,89,200); % sweep over various values psi %200 is better than 90- think on this
+PSI = linspace(0.01,89,200); % sweep over various values psi 
 pa= R^2/2; % integration constant to set C in pressure shape function
 if ~exist(fname,'file') || ~exist(fname2,'file')
-    aa = size(ZCM); %pre allocate
+    aa(1) = 200; %pre allocate
+    aa(2) = 1;
     d_0Mat = zeros(length(u),aa(1),aa(2));
     c_0Mat = zeros(length(ll),aa(1));
     for kl = 1:aa(2) %new
