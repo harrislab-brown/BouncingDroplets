@@ -57,7 +57,7 @@ for i=1:length(U_in)
     figure(10) %plot velocity
     hold on
     plot(t4a*sqrt(sig/(rho*R^3)),(Ya(1:end,2)./abs(U)),'r','LineWidth',1.5)
-    xlabel('$t/t_{sigma}$','Interpreter','latex','FontSize',18);ylabel('$z_{cm}/R$','Interpreter','latex','FontSize',18);
+    xlabel('$t/t_{\sigma}$','Interpreter','latex','FontSize',18);ylabel('$V_{cm}/V_0$','Interpreter','latex','FontSize',18);
     %%%%%%%%fill output array for plotting impact parameters
     final_data(i,1) = out4(1); %c_r measured when force turns oof (exact loss of contact)
     final_data(i,2) = out4(2); %tc measured when force turns oof (exact loss of contact)
@@ -96,3 +96,4 @@ else
 end
 xlabel('$We$','Interpreter','latex','FontSize',18);ylabel('$t_c/t_{\sigma}$','Interpreter','latex','FontSize',18);%title('Dimensionless Contact Time vs We')
 end
+
